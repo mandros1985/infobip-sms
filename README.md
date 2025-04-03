@@ -60,36 +60,38 @@ response:
   }
 ```
 ```ruby
-  ::Infobip::Sms::Connection.new.send_bulk_sms(phone_numbers_with_prefix: [+48600500400], content: "Some Message", custom_identifier: nil || "SMS_SENDER_NAME")
+  Infobip::Sms::Connection.new.get_reports(query: {bulkId: '"443689137154xxx434966"'})
 ```
 
 response: 
 ```ruby
-{
-    "bulkId": "33644485987105283959",
-    "messages": [
-        {
-            "to": "41793026727",
-            "status": {
-                "groupId": 1,
-                "groupName": "PENDING",
-                "id": 26,
-                "name": "PENDING_ACCEPTED",
-                "description": "Message sent to next instance"
-            },
-            "messageId": "33644485987105283960"
-        },
-        {
-            "to": "41793026727",
-            "status": {
-                "groupId": 1,
-                "groupName": "PENDING",
-                "id": 26,
-                "name": "PENDING_ACCEPTED",
-                "description": "Message sent to next instance"
-            },
-            "messageId": "33644485987105283961"
-        }
+  {
+    results: [
+      { bulk_id: "443689137xxx35434966",
+        message_id: "44368913715xx4967",
+        to: "4860xxx",
+        from: "TEST",
+        sent_at: "2025-04-03T14:05:37.157+0000",
+        done_at: "2025-04-03T14:05:37.615+0000",
+        sms_count: 1,
+        mcc_mnc: "null",
+        price: { price_per_message: 0.0558194, currency: "PLN" },
+        status: { group_id: 3, group_name: "DELIVERED", id: 5, name: "DELIVERED_TO_HANDSET", description: "Message delivered to handset" },
+        error: { group_id: 0, group_name: "OK", id: 0, name: "NO_ERROR", description: "No Error", permanent: false }
+      },
+      {
+        bulk_id: "443689xxx335434966",
+        message_id: "443689xx35434968",
+        to: "4866xxx",
+        from: "TEST",
+        sent_at: "2025-04-03T14:05:37.157+0000",
+        done_at: "2025-04-03T14:05:38.793+0000",
+        sms_count: 1,
+        mcc_mnc: "null",
+        price: { price_per_message: 0.0558194, currency: "PLN" },
+        status: { group_id: 3, group_name: "DELIVERED", id: 5, name: "DELIVERED_TO_HANDSET", description: "Message delivered to handset" },
+        error: { group_id: 0, group_name: "OK", id: 0, name: "NO_ERROR", description: "No Error", permanent: false }
+      }
     ]
 }
 ```
