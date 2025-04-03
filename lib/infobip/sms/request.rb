@@ -19,7 +19,7 @@ module Infobip
                      verify_mode: nil, body: nil, query: nil)
         raise "No configuration credentials provided !" if ::Infobip::Sms::Request.configuration.blank?
   
-        @base_url                = base_url || ::Infobip::Sms::Request.configuration.base_url
+        @base_url           = ::Infobip::Sms::Request.configuration.base_url
         @method             = method.present? ? method.to_s.downcase.intern : :get
         @payload            = payload
         @body               = body
@@ -75,6 +75,7 @@ module Infobip
         end
         r.set_form_data(payload) if payload.present?
         # r.basic_auth user, password
+        # binding.pry
         r
       end
   

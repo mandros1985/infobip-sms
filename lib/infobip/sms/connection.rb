@@ -35,7 +35,7 @@ module Infobip
       def send_bulk_sms(phone_numbers_with_prefix:, content:, custom_identifier: nil)
         body = { "messages": [] }
         phone_numbers_with_prefix.each do |phone_number|
-          body["messages"] << {
+          body[:"messages"] << {
             "from": custom_identifier || ::Infobip::Sms::Request.configuration.sms_identifier,
             "destinations": [
               {
