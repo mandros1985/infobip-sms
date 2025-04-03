@@ -54,20 +54,21 @@ response:
           "name": "PENDING_ACCEPTED",
           "description": "Message sent to next instance"
         },
-        "messageId": "33644496946605285365"
+        "messageId": "33644496xxxx05285365"
       }
     ]
   }
 ```
+
 ```ruby
-  Infobip::Sms::Connection.new.get_reports(query: {bulkId: '"443689137154xxx434966"'})
+  Infobip::Sms::Connection.new.get_reports(query: {bulkId: '44368913xxxxx434966'})
 ```
 
 response: 
 ```ruby
   {
     results: [
-      { bulk_id: "443689137xxx35434966",
+      { bulk_id: "443689xxxxxx35434966",
         message_id: "44368913715xx4967",
         to: "4860xxx",
         from: "TEST",
@@ -80,7 +81,7 @@ response:
         error: { group_id: 0, group_name: "OK", id: 0, name: "NO_ERROR", description: "No Error", permanent: false }
       },
       {
-        bulk_id: "443689xxx335434966",
+        bulk_id: "443689xxxxxx434966",
         message_id: "443689xx35434968",
         to: "4866xxx",
         from: "TEST",
@@ -95,6 +96,7 @@ response:
     ]
 }
 ```
+
 ```ruby
   ::Infobip::Sms::Connection.new.send_bulk_sms(query: { bulkId: '123', messageId: '123' })
 ```
@@ -104,8 +106,8 @@ response:
 {
     "results": [
         {
-            "bulkId": "33649386024303572262",
-            "messageId": "33649386024303572263",
+            "bulkId": "33649386xxx572262",
+            "messageId": "336xx86024303572263",
             "to": "41793026727",
             "from": "InfoSMS",
             "sentAt": "2021-11-09T21:37:40.258+0000",
