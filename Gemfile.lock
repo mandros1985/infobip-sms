@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    infobip-sms (0.1.2)
+    infobip-sms (0.1.3)
 
 GEM
   remote: https://rubygems.org/
