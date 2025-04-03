@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Michal Andros"]
   spec.email = ["michalandros@amcode.eu"]
 
-  spec.summary = "Specs for main functionalities"
+  spec.summary = "INFOBIP SMS Provider Client Library for Ruby for single / bulk / reports functionalities"
   spec.description = "single and bulk sms send and status check capabilities"
   spec.homepage = "https://github.com/mandros1985/infobip-sms"
   spec.license = "MIT"
