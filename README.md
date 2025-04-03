@@ -22,7 +22,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
     
     When bundled, set up a initializer to provide URL and the Identifier
 
-    Simply create a protool_api_client.rb file in the initializers directory, and set it up like this:
+    Simply create a infobip_sms_client.rb file in the initializers directory, and set it up like this:
 
 ```ruby
   ::Infobip::Sms::Request.configure do |c|
