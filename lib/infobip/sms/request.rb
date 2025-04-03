@@ -34,7 +34,7 @@ module Infobip
         retry_count ||= 0
         @path = "/#{path}" if path[0] != "/" && path.size >= 1
   
-        uri_obj = uri(host: host, path: path)
+        uri_obj = uri(host: base_url, path: path)
   
         resp = Net::HTTP.start(uri_obj.host, uri_obj.port, use_ssl: uri_obj.scheme == "https",
                                                            open_timeout: open_timeout, read_timeout: read_timeout,
