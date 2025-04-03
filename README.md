@@ -38,7 +38,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 Examples use for Infobip::Sms CLIENT
 
 ```ruby
-  ::Infobip::Sms::Connection.new.send_single_sms(phone_number_with_prefix: +48600500400, content: "Some Message", custom_identifier: nil || "SMS_SENDER_NAME")
+  ::Infobip::Sms::Connection.new.send_single_sms(phone_number_with_prefix: '+48600500400', content: 'Some Message', custom_identifier: nil || 'SMS_SENDER_NAME')
 ```
 
 response:
@@ -98,7 +98,7 @@ response:
 ```
 
 ```ruby
-  ::Infobip::Sms::Connection.new.send_bulk_sms(query: { bulkId: '123', messageId: '123' })
+  ::Infobip::Sms::Connection.new.send_bulk_sms(phone_numbers_with_prefix: ['+48600500400', '+48600500400'], content: 'Some Message', custom_identifier: nil || 'SMS_SENDER_NAME')
 ```
 
 response: 
